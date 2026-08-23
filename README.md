@@ -7,7 +7,7 @@
 
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 [![Kotlin](https://img.shields.io/badge/kotlin-2.1.0-blue.svg?logo=kotlin)](https://kotlinlang.org)
-[![Platform](https://img.shields.io/badge/Platform-Android%20minSdk%2029%20compileSdk%2037-green.svg?logo=android)](https://developer.android.com)
+[![Platform](https://img.shields.io/badge/Platform-Android_10+-green.svg?logo=android)](https://developer.android.com)
 
 </div>
 
