@@ -87,9 +87,6 @@ dependencies {
 
 
     // Sakshi SDK
-    // local
-    //implementation(project(":sakshi-sdk"))
-    // Maven Central
     implementation(libs.sakshi.sdk)
 
     // Coroutines
