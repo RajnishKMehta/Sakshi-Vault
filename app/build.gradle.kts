@@ -13,7 +13,7 @@ android {
         applicationId = "rajnishkmehta.sakshi.vault"
         minSdk = 29
         targetSdk = 37
-        versionCode = 1
+        versionCode = 2
         versionName = versionCode.toString() + "-beta"
     }
 
@@ -87,9 +87,6 @@ dependencies {
 
 
     // Sakshi SDK
-    // local
-    //implementation(project(":sakshi-sdk"))
-    // Maven Central
     implementation(libs.sakshi.sdk)
 
     // Coroutines

@@ -8,6 +8,7 @@ pluginManagement {
             }
         }
         mavenCentral()
+        mavenLocal()
         gradlePluginPortal()
     }
 }
@@ -16,10 +17,21 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
+        mavenLocal()
     }
 }
 
-rootProject.name = "sakshi-vault"
+rootProject.name = "Sakshi-Vault"
 include(":app")
-// include(":sakshi-sdk")
-// project(":sakshi-sdk").projectDir = file("../01_sdk/sakshi-sdk")
+
+/*
+includeBuild("../01_sdk") {
+    dependencySubstitution {
+        substitute(
+            module("io.github.rajnishkmehta.sakshi:sakshi-sdk")
+        ).using(
+            project(":sakshi-sdk")
+        )
+    }
+}
+*/
