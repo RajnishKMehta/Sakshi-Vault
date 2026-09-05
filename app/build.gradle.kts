@@ -13,7 +13,7 @@ android {
         applicationId = "rajnishkmehta.sakshi.vault"
         minSdk = 29
         targetSdk = 37
-        versionCode = 1
+        versionCode = 2
         versionName = versionCode.toString() + "-beta"
     }
 
