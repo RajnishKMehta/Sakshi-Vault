@@ -5,9 +5,10 @@ plugins {
 }
 
 android {
-    buildToolsVersion = "37.0.0"
-    namespace = "rajnishkmehta.sakshi.vault"
     compileSdk = 37
+    compileSdkMinor = 2
+    ndkVersion = "30.0.16248370"
+    namespace = "rajnishkmehta.sakshi.vault"
 
     defaultConfig {
         applicationId = "rajnishkmehta.sakshi.vault"
@@ -92,6 +93,10 @@ dependencies {
     // Coroutines
     implementation(libs.kotlinx.coroutines.core)
     implementation(libs.kotlinx.coroutines.android)
+    implementation(libs.kotlinx.coroutines.guava)
+
+    // Media3
+    implementation(libs.androidx.media3.inspector.frame)
 }
 
 room3 {
