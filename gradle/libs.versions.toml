@@ -9,7 +9,7 @@ room = "3.0.2"
 sakshi = "1.0.0-RC.0"
 kotlin = "2.4.20"
 coroutines = "1.11.0"
-media3 = "1.11.0"
+media3 = "1.11.1"
 androidx-core = "1.19.0"
 ksp = "2.3.12"
 
