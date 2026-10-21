@@ -12,6 +12,7 @@ import rajnishkmehta.sakshi.vault.db.VaultDatabase
 import rajnishkmehta.sakshi.vault.storage.StorageManager
 import java.io.IOException
 import java.io.InputStream
+import java.io.File
 
 /**
  * Engine responsible for performing photo and incremental video copy operations.
@@ -52,7 +53,7 @@ class CopyEngine(
             mediaType = mediaType,
             fileExtension = fileExtension,
             completionState = "COMPLETED",
-            lastCopiedOffset = java.io.File(vaultPath).length(),
+            lastCopiedOffset = File(vaultPath).length(),
             createdTime = existing?.createdTime ?: now,
             updatedTime = now
         )
@@ -63,7 +64,7 @@ class CopyEngine(
     /**
      * Performs a single incremental copy pass for a media file (video/audio).
      * Resumes from the last copied offset stored in the database, appends newly written bytes to vault storage,
-     * synchronizes file headers, and updates the offset and state in the database.
+     * and updates the offset and state in the database.
      *
      * @param fileId Unique identifier for the media file.
      * @param sourceUriStr Source URI string of the media.
