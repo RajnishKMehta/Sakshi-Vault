@@ -19,8 +19,8 @@ android {
         applicationId = "rajnishkmehta.sakshi.vault"
         minSdk = 29
         targetSdk = 37
-        versionCode = 4
-        versionName = "1.0.0-RC.0"
+        versionCode = 5
+        versionName = "1.0.0-RC.1"
     }
 
     buildFeatures {
@@ -101,6 +101,9 @@ dependencies {
     implementation(libs.kotlinx.coroutines.core)
     implementation(libs.kotlinx.coroutines.android)
     implementation(libs.kotlinx.coroutines.guava)
+
+    // WorkManager
+    implementation(libs.androidx.work.runtime)
 
     // Media3
     implementation(libs.androidx.media3.inspector.frame)
