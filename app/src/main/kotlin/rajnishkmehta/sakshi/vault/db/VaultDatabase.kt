@@ -9,19 +9,22 @@ import androidx.room3.Database
 import androidx.room3.Room
 import androidx.room3.RoomDatabase
 import androidx.sqlite.driver.AndroidSQLiteDriver
+import kotlinx.coroutines.Dispatchers
 
 /**
  * The Room database that stores all media synchronization metadata and deletion schedules for the Sakshi Vault.
  *
- * Uses Room 3 ([androidx.room3]) with the `AndroidSQLiteDriver`.
+ * Uses Room 3 ([androidx.room3]) with the [AndroidSQLiteDriver].
  */
-@Database(entities = [MediaRecord::class], version = 1, exportSchema = false)
+@Database(entities = [MediaRecord::class], version = 1, exportSchema = true)
 abstract class VaultDatabase : RoomDatabase() {
 
     /** Provides access to [MediaRecord] database operations. */
     abstract fun mediaRecordDao(): MediaRecordDao
 
     companion object {
+        const val DATABASE_NAME = "sakshi_vault_db"
+
         @Volatile
         private var INSTANCE: VaultDatabase? = null
 
@@ -36,11 +39,12 @@ abstract class VaultDatabase : RoomDatabase() {
                 val instance = Room.databaseBuilder(
                     context.applicationContext,
                     VaultDatabase::class.java,
-                    "sakshi_vault_beta_database"
+                    DATABASE_NAME
                 )
-                .setDriver(AndroidSQLiteDriver())
-                .fallbackToDestructiveMigration()
-                .build()
+                    .setDriver(AndroidSQLiteDriver())
+                    .setQueryCoroutineContext(Dispatchers.IO)
+                    .fallbackToDestructiveMigration(dropAllTables = true)
+                    .build()
                 INSTANCE = instance
                 instance
             }
