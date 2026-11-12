@@ -1,0 +1,93 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 1,
+    "identityHash": "e01e927af9355c0922bea4c420a444bf",
+    "entities": [
+      {
+        "tableName": "media_records",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`fileId` TEXT NOT NULL, `originalUri` TEXT NOT NULL, `vaultPath` TEXT, `mediaType` TEXT NOT NULL, `fileExtension` TEXT NOT NULL, `state` TEXT NOT NULL, `lastCopiedOffset` INTEGER NOT NULL, `createdTime` INTEGER NOT NULL, `updatedTime` INTEGER NOT NULL, `deletionScheduledAt` INTEGER, `deletionScheduledElapsedRealtime` INTEGER, `deletionScheduledBootCount` INTEGER, PRIMARY KEY(`fileId`))",
+        "fields": [
+          {
+            "fieldPath": "fileId",
+            "columnName": "fileId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "originalUri",
+            "columnName": "originalUri",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "vaultPath",
+            "columnName": "vaultPath",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "mediaType",
+            "columnName": "mediaType",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "fileExtension",
+            "columnName": "fileExtension",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "state",
+            "columnName": "state",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "lastCopiedOffset",
+            "columnName": "lastCopiedOffset",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "createdTime",
+            "columnName": "createdTime",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "updatedTime",
+            "columnName": "updatedTime",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "deletionScheduledAt",
+            "columnName": "deletionScheduledAt",
+            "affinity": "INTEGER"
+          },
+          {
+            "fieldPath": "deletionScheduledElapsedRealtime",
+            "columnName": "deletionScheduledElapsedRealtime",
+            "affinity": "INTEGER"
+          },
+          {
+            "fieldPath": "deletionScheduledBootCount",
+            "columnName": "deletionScheduledBootCount",
+            "affinity": "INTEGER"
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "fileId"
+          ]
+        }
+      }
+    ],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, 'e01e927af9355c0922bea4c420a444bf')"
+    ]
+  }
+}
