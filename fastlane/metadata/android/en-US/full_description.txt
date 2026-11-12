@@ -1,0 +1,67 @@
+<p><b>Sakshi Vault – The Storage Core of the Sākṣī Ecosystem.</b></p>
+
+<p>Sākṣī Vault is the central on-device storage component of the Sākṣī ecosystem. It is designed to receive, process and maintain media transferred by trusted companion applications such as Sākṣī Camera.</p>
+
+<p>Vault provides the storage foundation that allows Sākṣī applications to work together through local communication and controlled file-transfer workflows.</p>
+
+<p><b>WHAT MAKES SĀKṢĪ VAULT IMPORTANT?</b></p>
+
+<p>Instead of treating every companion application as an independent storage destination, Sākṣī uses Vault as a dedicated storage component. Client applications communicate with Vault through the Sākṣī SDK, allowing storage responsibilities to remain centralized.</p>
+
+<p><b>KEY FEATURES</b></p>
+
+<ul>
+<li><b>Private Application Storage:</b> Store transferred media inside Vault's private application storage rather than the public gallery.</li>
+<li><b>Centralized Media Management:</b> Maintain media records through Vault's dedicated storage layer.</li>
+<li><b>Background Processing:</b> Process file-transfer operations through scheduled background work.</li>
+<li><b>Incremental File Copying:</b> Support incremental copying of media data through the Sākṣī transfer architecture.</li>
+<li><b>Transfer Acknowledgments:</b> Notify requesting client applications when a file-copy operation has completed.</li>
+<li><b>Local-First Architecture:</b> Communicate with trusted Sākṣī client applications through local inter-process communication.</li>
+</ul>
+
+<p><b>HOW IT WORKS</b></p>
+
+<ol>
+<li>A trusted client application, such as Sākṣī Camera, initiates a file-transfer operation.</li>
+<li>The Sākṣī SDK facilitates communication between the client and Vault.</li>
+<li>Vault processes the requested transfer in the background.</li>
+<li>The transferred file is stored in Vault's private storage.</li>
+<li>Vault maintains the corresponding media record and sends a completion acknowledgment to the client.</li>
+</ol>
+
+<p><b>DESIGNED FOR RELIABLE STORAGE WORKFLOWS</b></p>
+
+<p>Sākṣī Vault uses dedicated Android components for its storage responsibilities:</p>
+
+<ul>
+<li><b>Room Database:</b> Maintains structured media records.</li>
+<li><b>Private File Storage:</b> Provides application-private storage for transferred files.</li>
+<li><b>WorkManager:</b> Handles background file-processing tasks.</li>
+<li><b>Transfer Acknowledgments:</b> Provides completion information to communicating client applications.</li>
+</ul>
+
+<p><b>PRIVACY AND DATA CONTROL</b></p>
+
+<p>Sākṣī is built around a local-first philosophy. Vault provides private on-device storage and supports communication with companion applications without making a cloud service a requirement for the documented local transfer workflow.</p>
+
+<p>Keeping storage responsibilities within a dedicated component also establishes a clear boundary between client applications and the storage layer.</p>
+
+<p><b>PART OF THE SĀKṢĪ ECOSYSTEM</b></p>
+
+<ul>
+<li><b>Sākṣī Camera:</b> Captures photos and videos and transfers them to Vault.</li>
+<li><b>Sākṣī Portal:</b> A companion application within the ecosystem.</li>
+<li><b>Sākṣī SDK:</b> Provides the local communication and client integration layer.</li>
+</ul>
+
+<p>Vault is the storage foundation connecting these components through defined interfaces and responsibilities.</p>
+
+<p><b>ONE STORAGE CORE. A CONNECTED ECOSYSTEM.</b></p>
+
+<p>Learn more about the Sākṣī architecture, privacy principles and ecosystem:</p>
+
+<p>https://sakshi-docs.gitbook.io/</p>
+
+<p><b>PRIVACY POLICY</b></p>
+<p>Read our Privacy Policy:</p>
+<p>https://sakshi-docs.gitbook.io/space/security-privacy/privacy-policy</p>
