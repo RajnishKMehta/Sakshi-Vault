@@ -18,12 +18,9 @@
 It runs as a separate background application without a user interface, dedicated to receiving and protecting media from client applications such as [Sākṣī Camera](https://github.com/RajnishKMehta/Sakshi-Camera) over local IPC.
 
 
-## ⬇️ Direct Download
+## 📥 Download Now
 
-[![Download APK](https://img.shields.io/badge/Download-Latest_APK-blue?style=for-the-badge&logo=android)](https://github.com/RajnishKMehta/Sakshi-Vault/releases/latest/download/Sakshi-Vault.apk)
-
-## 🛍️ Get via Stores
-
+[![Direct Download APK](https://img.shields.io/badge/Download-Latest_APK-blue?style=for-the-badge&logo=android)](https://github.com/RajnishKMehta/Sakshi-Vault/releases/latest/download/Sakshi-Vault.apk)
 <div align="center">
 <a href="https://github.com/RajnishKMehta/Sakshi-Vault/releases/latest"><img src="https://raw.githubusercontent.com/rubenpgrady/get-it-on-github/refs/heads/main/get-it-on-github.png" alt="Get it on GitHub" height="80"></a>
 <a href="https://apps.obtainium.imranr.dev/redirect?r=obtainium://add/https://github.com/RajnishKMehta/Sakshi-Vault"><img src="https://raw.githubusercontent.com/ImranR98/obtainium/main/assets/graphics/badge_obtainium.png" alt="Add to Obtainium" height="80"></a>
